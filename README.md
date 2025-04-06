@@ -21,7 +21,6 @@ Dự án này cung cấp chức năng xác thực qua OTP cho các tài khoản 
 /Adobe_Web                 # Thư mục gốc của dự án  
 ├── /html                  # Thư mục chứa các trang HTML  
 │   ├── Home.html          # Trang chính (Email OTP)  
-│   └── ReportEmail.html   # Trang báo cáo lỗi  
 ├── /css                   # Thư mục chứa các file CSS  
 │   ├── bootstrap.css      # Bootstrap CSS  
 │   ├── bootstrap.min.css  # Bootstrap minified CSS  
@@ -45,17 +44,13 @@ Dự án này cung cấp chức năng xác thực qua OTP cho các tài khoản 
    - Tải các file CSS và JS như Bootstrap và jQuery nếu chưa có trong thư mục của dự án.
 
 3. **Chạy ứng dụng:**
-   - Đơn giản mở file `Home.html` hoặc `ReportEmail.html` trong trình duyệt để sử dụng ứng dụng.
+   - Đơn giản mở file `Home.html`  trong trình duyệt để sử dụng ứng dụng.
 
 ## Hướng dẫn sử dụng:
 1. **Trang chính (Email OTP):**
    - Nhập địa chỉ email của bạn vào ô "Enter your Adobe Email".
    - Nhấn nút **Get Code** để nhận mã OTP.
    - Mã OTP sẽ được hiển thị và bạn có thể sao chép mã đó vào clipboard.
-
-2. **Trang báo cáo lỗi (Report Email):**
-   - Nhập địa chỉ email và nhấn **Check Status** để kiểm tra trạng thái tài khoản.
-   - Nếu bạn gặp sự cố, nhấn **Report Error** để báo cáo lỗi và chờ đợi quá trình sửa chữa.
 
 3. **Chế độ sáng/tối (Light/Dark Mode):**
    - Chuyển đổi giữa chế độ sáng và tối bằng công tắc ở góc trên bên phải của giao diện.
