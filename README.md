@@ -1,4 +1,4 @@
-# Adobe Email OTP and Report System
+# Adobe Email OTP
 
 **Mô tả:**  
 Dự án này cung cấp chức năng xác thực qua OTP cho các tài khoản Adobe, cũng như cho phép người dùng báo cáo lỗi qua email và kiểm tra trạng thái tài khoản của họ. Giao diện hỗ trợ chế độ sáng và tối (Dark Mode/Light Mode) để nâng cao trải nghiệm người dùng.
