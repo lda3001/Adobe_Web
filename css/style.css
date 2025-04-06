@@ -1,0 +1,713 @@
+body {
+    background-color: #bbbec1;
+    color: black;
+}
+
+#navbar{
+    z-index: 9999;
+}
+
+.navbar-light-mode {
+    background: linear-gradient(90deg, #A9D6E5, #89C2D9); 
+    color: black;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+.navbar-light-mode a {
+    color: black; 
+}
+
+
+
+body.dark-mode {
+    background-color: #2b363d;
+    color: white;
+    transition: background-color 0.5s ease, color 0.5s ease;
+
+}
+
+.navbar-dark-mode {
+    background-color: #1e1e2f; /* Màu nền tối (xám tím đậm) */
+    color: #f5f5f5; /* Màu chữ trắng sáng */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Hiệu ứng bóng đậm hơn */
+}
+
+.navbar-dark-mode a {
+    color: white; 
+}
+
+
+#themeToggle {
+    cursor: pointer;
+}
+
+
+.form-check-label {
+    color: black; 
+}
+
+body.dark-mode .form-check-label {
+    color: white; 
+}
+/* Hiển thị viền cho mục được chọn */
+.nav-link.active {
+    border-bottom: 2px solid #007bff; 
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.nav-link {
+    border-bottom: 2px solid transparent;
+}
+/* Nút navbar-toggler trong light mode */
+.navbar-light-mode .navbar-toggler {
+    background-color: #e9ecef; 
+    border: 1px solid #ced4da; 
+}
+
+.navbar-light-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Nút navbar-toggler trong dark mode */
+.navbar-dark-mode .navbar-toggler {
+    background-color: #495057; 
+    border: 1px solid #6c757d; 
+}
+
+.navbar-dark-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,0.8)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.form-container {
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    padding: 10px; 
+    background-color: #f9f9f9; 
+    max-width: 400px;
+    margin: auto; 
+    transition: all 0.3s ease-in-out; 
+}
+
+body.dark-mode .form-container {
+    border: 2px solid #555; 
+    background-color: #222; 
+}
+
+.form-container .form-label {
+    margin-bottom: 5px; 
+}
+
+.form-container .form-control {
+    margin-bottom: 10px; 
+}
+#emailError {
+    font-size: 0.9rem;
+    display: none; /* Hide initially */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#emailError.show {
+    opacity: 1;
+}
+.otp-input {
+    width: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.otp-input:last-child {
+    margin-right: 0;
+}
+/* Định nghĩa modal chế độ sáng */
+.modal-light-mode .modal-content {
+    background-color: #ffffff; /* Nền sáng */
+    color: black; /* Màu chữ sáng */
+}
+
+/* Định nghĩa modal chế độ tối */
+.modal-dark-mode .modal-content {
+    background-color: #333333; /* Nền tối */
+    color: white; /* Màu chữ sáng */
+}
+
+/* Nếu cần, bạn cũng có thể thay đổi màu nền cho phần header và footer */
+.modal-light-mode .modal-header,
+.modal-light-mode .modal-footer {
+    background-color: #f1f1f1; /* Nền sáng */
+}
+
+.modal-dark-mode .modal-header,
+.modal-dark-mode .modal-footer {
+    background-color: #212121; /* Nền tối */
+}
+/* Modal Light Mode */
+.modal-light-mode .modal-content {
+    background-color: #ffffff; /* Màu nền sáng */
+    color: #000; /* Màu chữ tối */
+}
+.modal-light-mode .modal-body {
+    background-color: #f9f9f9; /* Màu nền body sáng */
+    color: #000; /* Màu chữ tối */
+}
+
+/* Modal Dark Mode */
+.modal-dark-mode .modal-content {
+    background-color: #333333; /* Màu nền tối */
+    color: #ffffff; /* Màu chữ sáng */
+}
+.modal-dark-mode .modal-body {
+    background-color: #2b2b2b; /* Màu nền body tối */
+    color: #ffffff; /* Màu chữ sáng */
+}
+/* Bootstrap's is-invalid class will highlight the input field */
+input.is-invalid {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.875rem;
+}
+
+
+.check-adobe-title {
+    font-weight: 700 !important;
+}
+
+.slide-left {
+    animation: slide-right 0.8s forwards;
+}
+
+.slide-right {
+
+    animation: slide-left 0.8s forwards;
+}
+
+.slide-left-reverse {
+    animation: slide-left-reverse 0.8s forwards;
+}
+
+.slide-right-reverse {
+    animation: slide-right-reverse 0.8s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.8s ease-in-out;
+}
+span {
+    font-size: 1.25rem !important;
+}
+
+
+.pre-login-modal{
+    border-radius: 1.5rem ;
+   border: 0px !important;
+}
+
+.modal-body-login{
+    background-color: #d5d8da !important;
+}
+.dark-mode .modal-body-login{
+    background-color: #2e2c2d !important;
+}
+
+.input-login{
+    background-color: #f0f1f1 !important;
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+    color: #000000 !important;
+    border-top: 2.5px solid #e2e3e5;
+    border-bottom: 1.5px solid #e2e3e5;
+    border-left: 1.5px solid #e2e3e5;
+    
+}
+.dark-mode .input-login{
+    background-color: #161f26 !important;
+    color: #ffffff !important;
+    border-top: 2.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    border-left: 1.5px solid #000000;
+}
+
+.btn-otp{
+    background-color: #40c4e3 !important;
+   
+}
+
+#email{
+    background-color: #bbbec1 !important;
+}
+.dark-mode #email{
+    background-color: #2b363d !important;
+}
+
+
+
+.border-common {
+    border-radius: 1.5rem;
+    border-top: 2.5px solid #e2e3e5;
+   border-bottom: 1.5px solid #e2e3e5;
+   border-left: 1.5px solid #e2e3e5;
+   border-right: 1.5px solid #e2e3e5;
+}
+input.border-common{
+    border-radius: 1.5rem;
+    border-top: 2.5px solid #e2e3e5;
+    border-bottom: 1.5px solid #e2e3e5;
+    border-left: 1.5px solid #e2e3e5;
+    border-right: 1.5px solid #e2e3e5;
+}
+.dark-mode input.border-common{
+    border-radius: 1.5rem;
+    border-bottom: 1.5px solid #000000;
+    border-top: 2.5px solid #000000 !important;
+    border-left: 1.5px solid #000000;
+    border-right: 1.5px solid #000000;
+}
+/* .tab-common.border-common{
+    border-radius: 1.5rem;
+    border-bottom: 1.5px solid #e2e3e5;
+    border-top: 0px !important;
+    border-left: 1.5px solid #e2e3e5;
+    border-right: 1.5px solid #e2e3e5;
+} */
+
+.dark-mode .border-common{
+    border-radius: 1.5rem;
+    border-top : 2.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    border-left: 1.5px solid #000000;
+    border-right: 1.5px solid #000000;
+}
+.dark-mode .tab-common.border-common{
+    border-radius: 1.5rem;
+    border-bottom: 1.5px solid #000000;
+    border-top: 2.5px solid #000000 !important;
+    border-left: 1.5px solid #000000;
+    border-right: 1.5px solid #000000;
+}
+
+.btn-login{
+    background-color: #febe37 !important;
+    color: white !important;
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+    padding:  0.75rem !important;
+    border-top: 2.5px solid #e2e3e5;
+    border-bottom: 1.5px solid #e2e3e5;
+    border-right: 1.5px solid #e2e3e5;
+}
+.dark-mode .btn-login{
+   
+    border-top: 2.5px solid #444d55;
+    border-bottom: 1.5px solid #444d55;
+    border-right: 1.5px solid #444d55;
+}
+
+input::placeholder {
+    color: #221e1f !important;
+    text-align: center !important;
+    
+  }
+
+  .dark-mode input::placeholder {
+    color: #ffffff !important;
+  }
+
+  .home-container{
+    border-radius: 3rem ; 
+    min-height: 500px;
+   
+  }
+
+  .dark-mode .home-container{
+    
+  }
+
+  .input-group-email{
+    position: absolute !important;
+    top: 80px !important;
+    
+  }
+  .button-check-status{
+    position: absolute !important;
+    top: 200px !important;
+  }
+  .send-OTP{
+    position: absolute !important;
+    top: 250px !important;
+  }
+  
+
+  .input-email {
+    border-radius: 3rem !important;
+  }
+
+  
+
+  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes slide-left {
+    80% {
+        transform: translateX(-110%)
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide-right {
+    80% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-left-reverse {
+    0% {
+        transform: translateX(100%);
+    }
+
+    80% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right-reverse {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    80% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.reverse-border-radius {
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.reverse-border-radius-2{
+    border-top-right-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+#statusDiv,
+#otpDiv {
+    position: relative;
+    box-shadow: 0 0 15px 10px #fff;
+}
+body.dark-mode #statusDiv{
+    background-color: #161f26;
+    
+    box-shadow: 0px 0 15px 10px #1b1b20;
+}
+
+body.dark-mode #statusDiv.slide-left{
+    background-color: #10151b;
+    box-shadow: 0px 0 15px 10px #1b1b20;
+}
+#otpDiv{
+    background-color: #e6e7e8;
+    border-top-right-radius: 3rem;
+    border-bottom-right-radius: 3rem
+}
+#otpDiv.slide-right{
+    background-color: #f0f1f1;
+}
+#statusDiv{
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+    background-color: #f0f1f1;
+}
+#statusDiv.slide-left{
+    background-color: #e6e7e8;
+}
+
+body.dark-mode #otpDiv{
+    background-color: #10151b;
+    box-shadow: 0px 0 15px 10px #1b1b20;
+}
+
+body.dark-mode #otpDiv.slide-right{
+    background-color: #161f26;
+    box-shadow: 0px 0 15px 10px #1b1b20;
+}
+
+.tab-line{
+    position: absolute !important;
+    top: 50% !important;
+        z-index: 99;
+    background-color: #fff;
+}
+
+input.form-control {
+    font-size: 24px ;
+    text-align: center;
+}
+
+
+
+.hide-tab-1 {
+    pointer-events: none;
+    opacity: 0
+}
+
+.hide-tab-2 {
+    pointer-events: none;
+    opacity: 0
+}
+
+/* Add these new styles */
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: flex !important;
+}
+/* p {
+    font-size: 1.25rem !important;
+} */
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 200;
+}
+.slide-left .close-btn{
+    right: 5px;
+    left: auto;
+}
+
+.reload-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    z-index: 200;
+}
+.slide-right .reload-btn{
+    left: 5px;
+}
+
+.dark-mode .reload-btn{
+    color: #ffffff;
+}
+.dark-mode .close-btn{
+    color: #ffffff;
+}
+
+.expire-time{
+    position: absolute !important;
+    left: 0px !important;
+    right: 0px !important;
+    text-align: center !important;
+    width: 100% !important;
+    bottom: 0px !important;
+}
+
+.live-alert-tab{
+   position: absolute !important;
+   top: 150px !important;
+   left: 0px !important;
+   right: 0px !important;
+   bottom: 0px !important;
+}
+.live-alert-tab-otp{
+   position: absolute !important;
+   top: 150px !important;
+   left: 0px !important;
+   right: 0px !important;
+   bottom: 0px !important;
+}
+.tab-check-status{
+    position: absolute !important;
+    top: 150px !important;
+    left: 0px !important;
+    right: 0px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+}
+.tab-otp{
+    position: absolute !important;
+    top: 100px !important;
+    left: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+}
+
+.colored-toast.swal2-icon-success {
+    background-color: #a5dc86 !important;
+  }
+  
+  .colored-toast.swal2-icon-error {
+    background-color: #f27474 !important;
+  }
+  
+  .colored-toast.swal2-icon-warning {
+    background-color: #f8bb86 !important;
+  }
+  
+  .colored-toast.swal2-icon-info {
+    background-color: #3fc3ee !important;
+  }
+  
+  .colored-toast.swal2-icon-question {
+    background-color: #87adbd !important;
+  }
+
+  .tab-common{
+    background-color: #d5d8da;
+    min-height: 380px;
+    border-radius: 3rem;
+    
+  }
+  .dark-mode .tab-common{
+    background-color: #2e2c2d;
+  }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .slide-left, .slide-right, .slide-left-reverse, .slide-right-reverse {
+        animation: none;
+    }
+
+    .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .fade-out {
+        animation: fadeOut 0.8s ease-in-out;
+    }
+
+    #statusDiv, #otpDiv {
+        border-radius: 1.5rem !important;
+    }
+
+    .reverse-border-radius {
+        border-radius: 1.5rem !important;
+    }
+
+    .row {
+        margin: 0 10px;
+    }
+
+    #statusDiv, #otpDiv {
+        padding: 2rem !important;
+        min-height: 400px !important;
+    }
+
+    .input-group {
+        /* margin: 1rem 0 !important; */
+    }
+    .btn-login{
+        padding: 0.37rem 0.75rem !important;
+    }
+
+    input.form-control{
+        padding: 1.25rem !important;
+        font-size: 15px !important;
+    }
+    #otp-2{
+        /* padding-right: 2rem !important; */
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+        margin: 1rem 0 !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+    }
+    span{
+        font-size: 1rem !important;
+    }
+    .live-alert-tab {
+        top: 100px !important;
+    }
+    .reload-btn{
+        right: -5px !important;
+    }
+    .close-btn{
+        left: -5px !important;
+    }
+    #statusDiv {
+        order: 2;
+    }
+    #otpDiv {
+        order: 1;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-line {
+        display: none;
+    }
+}
